@@ -1,0 +1,99 @@
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 34px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(42px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translate3d(-42px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scrollPulse {
+  0% {
+    opacity: 0.25;
+    transform: scaleY(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0.25;
+    transform: scaleY(0.5);
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+}
+
+.fade-up.is-visible {
+  animation: fadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.slide-left.is-visible {
+  animation: slideLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.slide-right.is-visible {
+  animation: slideRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.zoom-in.is-visible {
+  animation: zoomIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.scroll-indicator i {
+  transform-origin: top;
+  animation: scrollPulse 1.6s ease-in-out infinite;
+}
+
+.parallax-item {
+  transition: transform 0.12s linear;
+}

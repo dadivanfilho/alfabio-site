@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.alfabio.com.br/ecotherm/sitemap.xml
